@@ -8,4 +8,8 @@ public class GachaPon {
         this.capsules = capsules;
     }
 
+    public Capsule getRandomCapsule() {
+        return this.capsules[(int)(Math.random() * this.capsules.length)];
+    }
+
 }
