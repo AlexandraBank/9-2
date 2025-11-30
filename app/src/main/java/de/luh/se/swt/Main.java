@@ -176,8 +176,9 @@ public class Main {
 				player.chargeMoney(1);
 				pon.addMoney(1);
 				Capsule capsule = pon.getRandomCapsule();
-			}
 
+				System.out.println("You got a: " + capsule.open());
+			}
 		}
 	}
 }
