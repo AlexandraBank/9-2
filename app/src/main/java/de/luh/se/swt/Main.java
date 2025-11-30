@@ -7,7 +7,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		OptionParser parser = new OptionParser(args, 
-			new Option("--help", false)
+			new Option("--help", true),
+			new Option("--money", false)
 		);
 
 		GachaPon pon = new GachaPon(
@@ -150,5 +151,13 @@ public class Main {
 			new Capsule("[Infinite Undo Button]"),
 			new Capsule("[Chair (slightly broken)]")
 		);
+
+		Player player = new Player(100);
+
+		UsedOption money = parser.getOption("--money");
+		if (money != null) {
+			int moneyValue = Integer.parseInt(money.getValue());
+			player.setMoney(moneyValue);
+		}
 	}
 }
