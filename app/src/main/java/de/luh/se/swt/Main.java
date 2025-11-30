@@ -9,5 +9,7 @@ public class Main {
 			new Option("--help", true),
 			new Option("--money", false)
 		);
+
+		Player player = new Player(100);
 	}
 }
