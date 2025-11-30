@@ -11,5 +11,11 @@ public class Main {
 		);
 
 		Player player = new Player(100);
+
+		UsedOption money = parser.getOption("--money");
+		if (money != null) {
+			int moneyValue = Integer.parseInt(money.getValue());
+			player.setMoney(moneyValue);
+		}
 	}
 }

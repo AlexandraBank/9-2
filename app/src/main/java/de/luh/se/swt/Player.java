@@ -16,4 +16,8 @@ public class Player {
         this.money -= amount;
     }
 
+    public void setMoney(double amount) {
+        this.money = amount;
+    }
+
 }
