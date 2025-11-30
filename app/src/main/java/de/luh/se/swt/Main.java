@@ -1,5 +1,7 @@
 package de.luh.se.swt;
 
+import java.util.Scanner;
+
 import de.luh.se.swt.gacha.*;
 import de.luh.se.swt.options.*;
 
@@ -158,6 +160,24 @@ public class Main {
 		if (money != null) {
 			int moneyValue = Integer.parseInt(money.getValue());
 			player.setMoney(moneyValue);
+		}
+
+		boolean isPlaying = true;
+		Scanner scanner = new Scanner(System.in);
+		while (isPlaying) {
+
+			String line = scanner.nextLine();
+			if (line.equalsIgnoreCase("exit")) {
+				isPlaying = false;
+				break;
+			}
+
+			if (line.equalsIgnoreCase("gamble")) {
+				player.chargeMoney(1);
+				pon.addMoney(1);
+				Capsule capsule = pon.getRandomCapsule();
+			}
+
 		}
 	}
 }
