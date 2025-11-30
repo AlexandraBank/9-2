@@ -9,6 +9,9 @@ public class GachaPon {
     }
 
     public Capsule getRandomCapsule() {
+        if (this.capsules.length == 0) {
+            return null;
+        }
         return this.capsules[(int)(Math.random() * this.capsules.length)];
     }
 
