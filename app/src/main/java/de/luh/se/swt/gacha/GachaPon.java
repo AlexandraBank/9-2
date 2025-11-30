@@ -17,7 +17,12 @@ public class GachaPon {
         if (this.capsules.size() == 0) {
             return null;
         }
-        return this.capsules.get((int)(Math.random() * this.capsules.size()));
+
+        int index = (int)(Math.random() * this.capsules.size());
+        Capsule c = this.capsules.get(index);
+
+        this.capsules.remove(index);
+        return c;
     }
 
     public void refill(Capsule[] capsules) {
