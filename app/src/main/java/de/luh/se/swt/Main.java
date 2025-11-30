@@ -164,6 +164,11 @@ public class Main {
 
 		boolean isPlaying = true;
 		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Welcome to the Gacha-Pon!!");
+		System.out.println("Enter 'gamble' to gamble! Or exit to leave.");
+		System.out.println("Did you know: 99% of gamblers stop before winning big!");
+
 		while (isPlaying) {
 
 			String line = scanner.nextLine();
@@ -177,8 +182,11 @@ public class Main {
 				pon.addMoney(1);
 				Capsule capsule = pon.getRandomCapsule();
 
-				System.out.println("You got a: " + capsule.open());
+				System.out.println("Winner!! You got a: " + capsule.open());
 			}
+
+			System.out.println("Money left: " + player.getMoney());
+			System.out.println();
 		}
 	}
 }
