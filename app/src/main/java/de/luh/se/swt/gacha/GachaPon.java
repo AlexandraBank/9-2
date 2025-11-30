@@ -1,15 +1,16 @@
 package de.luh.se.swt.gacha;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class GachaPon {
 
-    private List<Capsule> capsules;
+    private ArrayList<Capsule> capsules;
     private double money;
 
     public GachaPon(Capsule... capsules) {
-        this.capsules = Arrays.asList(capsules);
+        this.capsules = new ArrayList<>();
+        this.capsules.addAll(Arrays.asList(capsules));
         this.money = 0;
     }
 
