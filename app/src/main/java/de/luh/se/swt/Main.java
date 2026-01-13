@@ -161,12 +161,15 @@ public class Main {
 			int moneyValue;
 			try{
 <<<<<<< HEAD
+<<<<<<< HEAD
 				moneyValue = Integer.parseInt(money.getValue());
 			} catch (NumberFormatException e) {
 				moneyValue = 100;
 			}
 			player.setMoney(moneyValue);
 =======
+=======
+>>>>>>> b919df3 (Feat: Added Start Money for the User)
 				moneyValue = Integer.parseInt(money.getValue());	
 			}
 			catch(NumberFormatException e){
@@ -174,7 +177,17 @@ public class Main {
 				return;
 			}
 			player = new Player(moneyValue);
+<<<<<<< HEAD
 >>>>>>> b7aa1f6 (feat: the system is not able to recognize the Money Input correctly)
+=======
+=======
+				moneyValue = Integer.parseInt(money.getValue());
+			} catch (NumberFormatException e) {
+				moneyValue = 100;
+			}
+			player.setMoney(moneyValue);
+>>>>>>> a9a16e0 (Feat: Added Start Money for the User)
+>>>>>>> b919df3 (Feat: Added Start Money for the User)
 		}
 
 		boolean isPlaying = true;
