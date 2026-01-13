@@ -160,11 +160,21 @@ public class Main {
 		if (money != null) {
 			int moneyValue;
 			try{
+<<<<<<< HEAD
 				moneyValue = Integer.parseInt(money.getValue());
 			} catch (NumberFormatException e) {
 				moneyValue = 100;
 			}
 			player.setMoney(moneyValue);
+=======
+				moneyValue = Integer.parseInt(money.getValue());	
+			}
+			catch(NumberFormatException e){
+				system.out.println(x: "Money is not valid number.");
+				return;
+			}
+			player = new Player(moneyValue);
+>>>>>>> b7aa1f6 (feat: the system is not able to recognize the Money Input correctly)
 		}
 
 		boolean isPlaying = true;
