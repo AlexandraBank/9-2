@@ -158,8 +158,15 @@ public class Main {
 
 		UsedOption money = parser.getOption("--money");
 		if (money != null) {
-			int moneyValue = Integer.parseInt(money.getValue());
-			player.setMoney(moneyValue);
+			int moneyValue;
+			try{
+				moneyValue = Integer.parseInt(money.getValue());	
+			}
+			catch(NumberFormatException e){
+				system.out.println(x: "Money is not valid number.");
+				return;
+			}
+			player = new Player(moneyValue);
 		}
 
 		boolean isPlaying = true;
