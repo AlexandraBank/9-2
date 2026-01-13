@@ -158,7 +158,12 @@ public class Main {
 
 		UsedOption money = parser.getOption("--money");
 		if (money != null) {
-			int moneyValue = Integer.parseInt(money.getValue());
+			int moneyValue;
+			try{
+				moneyValue = Integer.parseInt(money.getValue());
+			} catch (NumberFormatException e) {
+				moneyValue = 100;
+			}
 			player.setMoney(moneyValue);
 		}
 
